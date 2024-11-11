@@ -47,8 +47,8 @@ bool AudioOutputSPIFFSWAV::begin()
   memset(wavHeader, 0, sizeof(wavHeader));
 
   if (f) return false; // Already open!
-  SPIFFS.remove(filename);
-  f = SPIFFS.open(filename, "w+");
+  //SPIFFS.remove(filename);
+  //f = SPIFFS.open(filename, "w+");
   if (!f) return false;
   
   // We'll fix the header up when we close the file
